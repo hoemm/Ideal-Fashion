@@ -182,7 +182,7 @@ public class LoginUser extends javax.swing.JFrame {
             this.dispose();
             T.setVisible(true); 
 }else{
-     JOptionPane.showMessageDialog(rootPane, "login = rabito.com e senha = rabao");
+     JOptionPane.showMessageDialog(rootPane, "login = Rabito@gmail.com e senha = Rabao");
     }//GEN-LAST:event_JBLoginActionPerformed
     }
     private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
