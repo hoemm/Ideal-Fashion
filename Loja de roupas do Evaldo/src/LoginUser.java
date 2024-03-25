@@ -58,6 +58,12 @@ public class LoginUser extends javax.swing.JFrame {
             .addGap(0, 52, Short.MAX_VALUE)
         );
 
+        JTEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTEmailActionPerformed(evt);
+            }
+        });
+
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setText("Email:");
         jLabel3.addAncestorListener(new javax.swing.event.AncestorListener() {
@@ -165,8 +171,15 @@ public class LoginUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4AncestorAdded
 
     private void JBLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBLoginActionPerformed
-        // TODO add your handling code here:
+        
+        String Email = JTEmail.getText();
+        String Senha = String.valueOf(JTPassword.getPassword());
+        
     }//GEN-LAST:event_JBLoginActionPerformed
+
+    private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
+        
+    }//GEN-LAST:event_JTEmailActionPerformed
 
     /**
      * @param args the command line arguments
