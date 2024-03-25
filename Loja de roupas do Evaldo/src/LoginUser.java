@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,7 +11,7 @@
  * @author Josiel
  */
 public class LoginUser extends javax.swing.JFrame {
-
+    ordem adm = new ordem( "Rabito@gmail.com", "Rabao");
     /**
      * Creates new form LoginUser
      */
@@ -174,9 +177,14 @@ public class LoginUser extends javax.swing.JFrame {
         
         String Email = JTEmail.getText();
         String Senha = String.valueOf(JTPassword.getPassword());
-        
+         if (Email.equals(adm.getEmail()) && Senha.equals(adm.getSenha())){
+            TelaAtendente T = new TelaAtendente();
+            this.dispose();
+            T.setVisible(true); 
+}else{
+     JOptionPane.showMessageDialog(rootPane, "login = rabito.com e senha = rabao");
     }//GEN-LAST:event_JBLoginActionPerformed
-
+    }
     private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
         
     }//GEN-LAST:event_JTEmailActionPerformed
