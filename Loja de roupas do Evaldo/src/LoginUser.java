@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Josiel
  */
 public class LoginUser extends javax.swing.JFrame {
-    ordem adm = new ordem( "Rabito@gmail.com", "Rabao");
+    ordem adm = new ordem( "login", "senha");
     /**
      * Creates new form LoginUser
      */
@@ -182,7 +182,9 @@ public class LoginUser extends javax.swing.JFrame {
             this.dispose();
             T.setVisible(true); 
 }else{
-     JOptionPane.showMessageDialog(rootPane, "login = Rabito@gmail.com e senha = Rabao");
+     JOptionPane.showMessageDialog(rootPane, " SENHA OU LOGIN INCORRETO!!");
+     JTEmail.setText("");
+     JTPassword.setText("");
     }//GEN-LAST:event_JBLoginActionPerformed
     }
     private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
