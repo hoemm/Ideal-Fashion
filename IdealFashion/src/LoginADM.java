@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author Josiel
  */
-public class LoginUser extends javax.swing.JFrame {
+public class LoginADM extends javax.swing.JFrame {
     
     /**
      * Creates new form LoginUser
      */
-    public LoginUser() {
+    public LoginADM() {
         initComponents();
     }
 
@@ -174,19 +174,9 @@ public class LoginUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4AncestorAdded
 
     private void JBLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBLoginActionPerformed
-        
-        String Email = JTEmail.getText();
-        String Senha = String.valueOf(JTPassword.getPassword());
-         if (Email.equals(adm.getEmail()) && Senha.equals(adm.getSenha())){
-            TelaAtendente T = new TelaAtendente();
-            this.dispose();
-            T.setVisible(true); 
-}else{
-     JOptionPane.showMessageDialog(rootPane, " SENRETO!!");
-     JTEmail.setText("");
-     JTPassword.setText("");
+        // nsei
     }//GEN-LAST:event_JBLoginActionPerformed
-    }
+
     private void JTEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTEmailActionPerformed
         
     }//GEN-LAST:event_JTEmailActionPerformed
@@ -221,7 +211,7 @@ public class LoginUser extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginUser().setVisible(true);
+                new LoginADM().setVisible(true);
             }
         });
     }
