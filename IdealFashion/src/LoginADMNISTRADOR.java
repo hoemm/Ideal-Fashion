@@ -9,6 +9,8 @@
  */
 public class LoginADMNISTRADOR extends javax.swing.JInternalFrame {
 
+        
+        
     /**
      * Creates new form LoginADMNISTRADOR
      */

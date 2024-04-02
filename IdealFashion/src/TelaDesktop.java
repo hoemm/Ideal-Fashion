@@ -114,7 +114,11 @@ public class TelaDesktop extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        
+        LoginADMNISTRADOR TELADM = new LoginADMNISTRADOR();
+            jDesktopPane1.add(TELADM);
+            TELADM.setVisible(true); 
+               
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
