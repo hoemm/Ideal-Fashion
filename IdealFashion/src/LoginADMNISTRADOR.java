@@ -37,6 +37,11 @@ public class LoginADMNISTRADOR extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jPasswordFieldpn = new javax.swing.JPasswordField();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         jusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jusuarioActionPerformed(evt);

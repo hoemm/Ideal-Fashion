@@ -66,6 +66,11 @@ public class TelaDesktop extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Gerente");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("Administrador");
@@ -114,16 +119,28 @@ public class TelaDesktop extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+       
         
-        LoginADMNISTRADOR TELADM = new LoginADMNISTRADOR();
+         LoginADMNISTRADOR TELADM = new LoginADMNISTRADOR();
             jDesktopPane1.add(TELADM);
-            TELADM.setVisible(true); 
+            TELADM.setVisible(true);
                
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+
+
+            TelaGerente TELAGT = new TelaGerente();
+            jDesktopPane1.add(TELAGT);
+            TELAGT.setVisible(true); 
+
+
+
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
