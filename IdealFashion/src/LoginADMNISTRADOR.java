@@ -116,8 +116,8 @@ public class LoginADMNISTRADOR extends javax.swing.JInternalFrame {
         String Email = jusuario.getText();
         String Senha = String.valueOf(jPasswordFieldpn.getPassword());
         if (Email.equals(administrador.getUsuario()) && Senha.equals(administrador.getSenha())){
-            Teste T = new Teste();
-            this.dispose();
+            TelaAdm T = new TelaAdm();
+            jButton1.add(T);
             T.setVisible(true); 
         }else{
             JOptionPane.showMessageDialog(rootPane, "SENHA INCORRETA , INFORME NOVAMENTE");
