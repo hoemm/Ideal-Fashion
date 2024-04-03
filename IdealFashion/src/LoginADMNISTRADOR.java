@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class LoginADMNISTRADOR extends javax.swing.JInternalFrame {
 
-        ordem adm = new ordem( "login", "senha");
+        Login administrador = new Login( "login", "senha");
         
     /**
      * Creates new form LoginADMNISTRADOR
@@ -112,15 +112,15 @@ public class LoginADMNISTRADOR extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-                String Email = jusuario.getText();
+        // TODO add your handling code here:
+        String Email = jusuario.getText();
         String Senha = String.valueOf(jPasswordFieldpn.getPassword());
-         if (Email.equals(adm.getEmail()) && Senha.equals(adm.getSenha())){
-            TelaAtendente T = new TelaAtendente();
+        if (Email.equals(administrador.getUsuario()) && Senha.equals(administrador.getSenha())){
+            Teste T = new Teste();
             this.dispose();
             T.setVisible(true); 
-}else{
-             JOptionPane.showMessageDialog(rootPane, "SENHA INCORRETA , INFORME NOVAMENTE");
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "SENHA INCORRETA , INFORME NOVAMENTE");
             jusuario.setText("");
             jPasswordFieldpn.setText("");
      

@@ -31,10 +31,10 @@ public class TelaDesktop extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        JMAtendente = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        JMGerente = new javax.swing.JMenuItem();
+        JMAdministrador = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,10 +50,10 @@ public class TelaDesktop extends javax.swing.JFrame {
             .addGap(0, 413, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Usuários");
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+        JMAtendente.setText("Usuários");
+        JMAtendente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
+                JMAtendenteActionPerformed(evt);
             }
         });
 
@@ -63,27 +63,32 @@ public class TelaDesktop extends javax.swing.JFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        JMAtendente.add(jMenuItem1);
 
-        jMenuItem2.setText("Gerente");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        JMGerente.setText("Gerente");
+        JMGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                JMGerenteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        JMAtendente.add(JMGerente);
 
-        jMenuItem3.setText("Administrador");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        JMAdministrador.setText("Administrador");
+        JMAdministrador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                JMAdministradorActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        JMAtendente.add(JMAdministrador);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(JMAtendente);
 
         jMenu2.setText("Info");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -103,46 +108,37 @@ public class TelaDesktop extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-     
-        
-        LoginAtendente TelaAtn = new LoginAtendente();
-      jDesktopPane1.add(TelaAtn);
-      TelaAtn.setVisible(true);
+        LoginAtendente TelaAtendente = new LoginAtendente();
+        jDesktopPane1.add(TelaAtendente);
+        TelaAtendente.setVisible(true);
         
         
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-       
-        
-         LoginADMNISTRADOR TELADM = new LoginADMNISTRADOR();
-            jDesktopPane1.add(TELADM);
-            TELADM.setVisible(true);
+    private void JMAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMAdministradorActionPerformed
+        LoginADMNISTRADOR TelaAdministrador = new LoginADMNISTRADOR();
+        jDesktopPane1.add(TelaAdministrador);
+        TelaAdministrador.setVisible(true);
                
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_JMAdministradorActionPerformed
 
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-       
-        
-        
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_jMenu1ActionPerformed
+    private void JMAtendenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMAtendenteActionPerformed
+          
+    }//GEN-LAST:event_JMAtendenteActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-
-
-            TelaGerente TELAGT = new TelaGerente();
-            jDesktopPane1.add(TELAGT);
-            TELAGT.setVisible(true); 
+    private void JMGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMGerenteActionPerformed
+        TelaGerente TELAGT = new TelaGerente();
+        jDesktopPane1.add(TELAGT);
+        TELAGT.setVisible(true); 
 
 
 
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_JMGerenteActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,13 +176,13 @@ public class TelaDesktop extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem JMAdministrador;
+    private javax.swing.JMenu JMAtendente;
+    private javax.swing.JMenuItem JMGerente;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 
     }

@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 
 public class TelaGerente extends javax.swing.JInternalFrame {
-  ordem gerente = new ordem( "login", "senha");
+  Login gerente = new Login( "login", "senha");
     /**
      * Creates new form TelaGerente
      */
@@ -22,9 +22,9 @@ public class TelaGerente extends javax.swing.JInternalFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLogin02 = new javax.swing.JTextField();
-        jSenha02 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        JTUsuario = new javax.swing.JTextField();
+        JTSenha = new javax.swing.JPasswordField();
+        JBLogin = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -32,15 +32,15 @@ public class TelaGerente extends javax.swing.JInternalFrame {
         setResizable(true);
 
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel2.setText("Login");
+        jLabel2.setText("Usuario");
 
         jLabel3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel3.setText("PIN");
+        jLabel3.setText("Senha");
 
-        jButton1.setText("Entrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        JBLogin.setText("Login");
+        JBLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                JBLoginActionPerformed(evt);
             }
         });
 
@@ -51,12 +51,12 @@ public class TelaGerente extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addComponent(JBLogin)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel3)
                         .addComponent(jLabel2)
-                        .addComponent(jSenha02, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
-                        .addComponent(jLogin02)))
+                        .addComponent(JTSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                        .addComponent(JTUsuario)))
                 .addContainerGap(105, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -65,45 +65,44 @@ public class TelaGerente extends javax.swing.JInternalFrame {
                 .addGap(99, 99, 99)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLogin02, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSenha02, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(JBLogin)
                 .addGap(24, 24, 24))
         );
 
         setSize(new java.awt.Dimension(478, 375));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
-         String Email = jLogin02.getText();
-        String Senha = String.valueOf(jSenha02.getPassword());
-         if (Email.equals(gerente.getEmail()) && Senha.equals(gerente.getSenha())){
-            
-            TelaGerente T = new TelaGerente();
+    private void JBLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBLoginActionPerformed
+        // TODO add your handling code here:
+        String Email = JTUsuario.getText();
+        String Senha = String.valueOf(JTSenha.getPassword());
+        if (Email.equals(gerente.getUsuario()) && Senha.equals(gerente.getSenha())){           
+            Teste T = new Teste();
             this.dispose();
             T.setVisible(true); 
-         }
-         else{
+        }
+        else{
             
-             JOptionPane.showMessageDialog(null, "SENHA INCORRETA , INFORME NOVAMENTE");
-            jLogin02.setText("");
-            jSenha02.setText("");
+            JOptionPane.showMessageDialog(null, "SENHA INCORRETA , INFORME NOVAMENTE");
+            JTUsuario.setText("");
+            JTSenha.setText("");
          }
 
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_JBLoginActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton JBLogin;
+    private javax.swing.JPasswordField JTSenha;
+    private javax.swing.JTextField JTUsuario;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jLogin02;
-    private javax.swing.JPasswordField jSenha02;
     // End of variables declaration//GEN-END:variables
 }
